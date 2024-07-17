@@ -16,6 +16,9 @@ function App() {
     <BrowserRouter>
       <div>
         <h1>React Router DOM</h1>
+        <a href='/1'>1번으로 이동</a> /&nbsp;
+        <a href='/2'>2번으로 이동</a> /&nbsp;
+        <a href='/3'>3번으로 이동</a>
         <Routes>
           <Route path='/1' element={<Component1 />} />
           <Route path='/2' element={<Component2 />} />
