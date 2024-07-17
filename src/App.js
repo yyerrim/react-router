@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 function Component1() {
@@ -12,12 +13,16 @@ function Component3() {
 
 function App() {
   return (
-    <div>
-      <h1>React Router DOM</h1>
-      <Component1 />
-      <Component2 />
-      <Component3 />
-    </div>
+    <BrowserRouter>
+      <div>
+        <h1>React Router DOM</h1>
+        <Routes>
+          <Route path='/1' element={<Component1 />} />
+          <Route path='/2' element={<Component2 />} />
+          <Route path='/3' element={<Component3 />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
