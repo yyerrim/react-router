@@ -1,0 +1,21 @@
+<body>
+    <script>
+        // href, search ... 사용할 수 있는거 확인 가능
+        console.dir(location);
+
+        // location.href : 현재 접속해있는 브라우저의 주소를 알아낼 수 있음
+        const href = location.href;
+        console.log(href);
+        // http://127.0.0.1:5500/test.html?a=1&b=2 ===> http://127.0.0.1:5500/test.html?a=1&b=2 출력
+
+        // 접속한 도메인, 접속한 문서명은 제외하고 Query String만 찍혀나옴
+        const search = location.search;
+        console.log(search);
+        // http://127.0.0.1:5500/test.html?a=1&b=2 ===> ?a=1&b=2 출력
+
+        // b의 값인 2만 출력하고싶음
+        const s = new URLSearchParams(search);
+        console.log(s.get('a')); // 1 출력
+        console.log(s.get('b')); // 2 출력
+    </script>
+</body>
